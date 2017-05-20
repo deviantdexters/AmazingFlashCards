@@ -1,0 +1,9 @@
+apply plugin: 'com.android.application'
+apply from: '../common_gradle_file.gradle'
+
+dependencies {
+    compile project(':storage')
+    compile project(':errorsandvalidations' +
+            '')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+}
