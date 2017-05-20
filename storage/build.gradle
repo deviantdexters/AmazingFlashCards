@@ -1,0 +1,3 @@
+apply plugin: 'com.android.library'
+apply from: '../common_gradle_file.gradle'
+apply plugin: 'realm-android'
