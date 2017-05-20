@@ -17,10 +17,10 @@ public class BookmarkedWords
         extends RealmObject {
 
     @PrimaryKey
-    private final int id;
-    private final String word;
-    private final int source;
-    private final Date insertionDate;
+    private int id;
+    private String word;
+    private int source;
+    private Date insertionDate;
 
     public BookmarkedWords() {
     }
@@ -140,7 +140,7 @@ public class BookmarkedWords
         }
 
         public BookmarkedWords buildWithid() {
-            return new BookmarkedWords(this, Realm.getDefaultInstance().where(BookmarkedWords.class).findAll().size() + 1)
+            return new BookmarkedWords(this, Realm.getDefaultInstance().where(BookmarkedWords.class).findAll().size() + 1);
         }
     }
 }

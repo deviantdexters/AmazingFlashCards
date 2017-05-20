@@ -40,10 +40,9 @@ public class Home extends AppCompatActivity {
             final FileInputStream fileInputStream = new FileInputStream(wordWebBookmarkFile);
             final InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
             final BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-            String readLine = bufferedReader.readLine()
+            String readLine = bufferedReader.readLine();
             while (readLine != null) {
-
-                readLine = bufferedReader.readLine()
+                readLine = bufferedReader.readLine();
             }
         } catch (IOException e) {
             IssuesAndValidationHandler.showMessageToUserFor(LocalErrors.FILE_READING_FAILED);
