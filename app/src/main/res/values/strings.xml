@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AmazingFlashCard</string>
+    <string name="rationale_for_storage_permission">We need to read and write bookmarked words.</string>
+    <string name="failure_of_storage_permission">Failed to get storage permissions.</string>
+    <string name="validation_issue_unable_to_locate_file">Unable to locate requested file.</string>
+    <string name="local_error_file_reading_failed">Error while reading specified file.</string>
+    <string name="flash_card_action_reveal">Reveal</string>
+    <string name="flash_card_title_word_web">WordWeb</string>
 </resources>

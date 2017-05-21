@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sahilguptalive.amazingflashcard.Home">
+    tools:context="com.sahilguptalive.amazingflashcard.Home"
+    android:id="@+id/root_layout">
 
     <TextView
         android:layout_width="wrap_content"

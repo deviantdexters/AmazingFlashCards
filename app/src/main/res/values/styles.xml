@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="flash_card_section_header_style">
+        <item name="android:background">@android:color/holo_blue_dark</item>
+    </style>
+
 </resources>

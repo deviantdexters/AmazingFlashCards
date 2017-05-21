@@ -13,7 +13,7 @@ import io.realm.annotations.PrimaryKey;
 /**
  * Created on 20-05-2017.
  */
-public class BookmarkedWords
+public class BookmarkedWord
         extends RealmObject {
 
     @PrimaryKey
@@ -22,18 +22,18 @@ public class BookmarkedWords
     private int source;
     private Date insertionDate;
 
-    public BookmarkedWords() {
+    public BookmarkedWord() {
     }
 
-    private BookmarkedWords(final Builder builder) {
+    private BookmarkedWord(final Builder builder) {
         this.id = builder.id;
         this.word = builder.word;
         this.source = builder.source;
         this.insertionDate = builder.insertionDate;
     }
 
-    public BookmarkedWords(final Builder builder,
-                           final int id) {
+    public BookmarkedWord(final Builder builder,
+                          final int id) {
         this.id = id;
         this.word = builder.word;
         this.source = builder.source;
@@ -61,7 +61,7 @@ public class BookmarkedWords
     }
 
 
-    public static Builder newBuilder(final BookmarkedWords copy) {
+    public static Builder newBuilder(final BookmarkedWord copy) {
         Builder builder = new Builder();
         builder.id = copy.id;
         builder.word = copy.word;
@@ -72,7 +72,7 @@ public class BookmarkedWords
 
 
     /**
-     * {@code BookmarkedWords} builder static inner class.
+     * {@code BookmarkedWord} builder static inner class.
      */
     public static final class Builder {
         private int id;
@@ -131,16 +131,23 @@ public class BookmarkedWords
         }
 
         /**
-         * Returns a {@code BookmarkedWords} built from the parameters previously set.
+         * Returns a {@code BookmarkedWord} built from the parameters previously set.
          *
-         * @return a {@code BookmarkedWords} built with parameters of this {@code BookmarkedWords.Builder}
+         * @return a {@code BookmarkedWord} built with parameters of this {@code BookmarkedWord.Builder}
          */
-        public BookmarkedWords build() {
-            return new BookmarkedWords(this);
+        public BookmarkedWord build() {
+            return new BookmarkedWord(this);
         }
 
-        public BookmarkedWords buildWithid() {
-            return new BookmarkedWords(this, Realm.getDefaultInstance().where(BookmarkedWords.class).findAll().size() + 1);
+        public BookmarkedWord buildWithid() {
+            return new BookmarkedWord(this, Realm.getDefaultInstance().where(BookmarkedWord.class).findAll().size() + 1);
         }
+    }
+
+    public static class ColumnNames {
+        public static final String ID = "id";
+        public static final String WORD = "word";
+        public static final String SOURCE = "source";
+        public static final String INSERTION_DATE = "insertionDate";
     }
 }
